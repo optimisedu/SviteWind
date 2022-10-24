@@ -1,6 +1,8 @@
 
   <script>
-   export let white;
+   export function toggle(e) {
+     return e=!e;
+   }
   </script>
   
   <label for="default-toggle" class="inline-flex relative items-center cursor-pointer">

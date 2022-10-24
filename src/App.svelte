@@ -1,10 +1,18 @@
 <script>
-import "./app.postcss";
-import Toggle from "./lib/Toggle.svelte";
-import _ from "lodash-es"
+let iput;
+const SPACE = ' ';
+// function ip(iput, space)
+// {
+//     return iput.split(space).join('');
+// }
+// $: logic = ip;
 
-let iput= " " ;
-let output;
+// const join = (iput, SPACE) =>{return iput.concat(SPACE);}
+// const split = (iput) => {return iput.split();}
+// const replace = (iput, targ, subj) => {return iput.split(targ).join(subj);}
+// function sanitise(iput, replace){   
+//   $: replace(iput, " ", "");
+// }
 </script>
 
 <main class = "grid-flow-col">
@@ -20,7 +28,7 @@ let output;
         {iput}
       </label>
       <textarea 
-        bind:value={iput}
+
         id="iput"
         rows="6"
         class="px-0 w-full text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
@@ -31,14 +39,14 @@ let output;
 </form>
 
 
- <div class ="grid place-content-center">
-<Toggle white bind:value={white}></Toggle>
-</div>
+ <!-- <div class ="grid place-content-center">
+<Toggle on:toggle={white}></Toggle>
+</div> -->
 
 
 
   <div class ="flex justify-center">
-  <button type="button" class="flex justify-self-center focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" on:click={whiteSpace}>convert</button>
+  <button type="button" class="flex justify-self-center focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-6 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">convert</button>
   </div>
 
 
@@ -53,7 +61,6 @@ let output;
         rows="6"
         class="px-0 w-full text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
         placeholder='{iput}'
-        disabled = true
       ></textarea>
     </div>
   </div>
