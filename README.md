@@ -1,6 +1,6 @@
-# Svelte + Vite
+# Svelte + Vite + TailwindCSS
 
-This template should help get you started developing with Svelte in Vite.
+This is a basic SPA made in svelte - it sanitises the whitespace of textbox. Eventually I want to make more use of the Svelte framework - this is a simple tool for critical CSS extraction.
 
 ## Recommended IDE Setup
 
